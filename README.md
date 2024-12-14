@@ -1,5 +1,5 @@
 ## Prérequis : 
-**Windows xp : https://archive.org/details/WinXPSP2HomeEditionFrench**  
+**Windows xp : https://archive.org/details/WinXPSP2HomeEditionFrench**  Telecharger en Torrent ça va plus vite ! 
 **Kali Linux : https://www.kali.org/get-kali/#kali-platforms**  
 **VMware ou virtualBox**  
 
