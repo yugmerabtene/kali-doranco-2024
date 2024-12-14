@@ -1,3 +1,7 @@
+## Prérequis : 
+**Windows xp : https://archive.org/details/WinXPSP2HomeEditionFrench**  
+**Kali Linux : https://www.kali.org/get-kali/#kali-platforms**
+
 ### Étape 1 : **Afficher les exploits disponibles dans Metasploit**
 1. **Lancer Metasploit** :
    ```bash
